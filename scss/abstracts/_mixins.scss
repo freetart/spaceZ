@@ -1,0 +1,47 @@
+@mixin flexLayout() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin sectionSpacing() {
+  padding: 5rem 2rem;
+}
+
+@mixin headingStyles() {
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+@mixin textStyles() {
+  text-shadow: 0.5rem 0.5rem 0.5rem color(blackColor);
+}
+
+@mixin response($breakpoint) {
+  @if ($breakpoint == lg) {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == md) {
+    @media (max-width: 800px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == sm) {
+    @media (max-width: 700px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == xs) {
+    @media (max-width: 450px) {
+      @content;
+    }
+  }
+}

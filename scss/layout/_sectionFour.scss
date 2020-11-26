@@ -1,0 +1,40 @@
+.section-4 {
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(/images/space5.jpg) center center/cover no-repeat;
+
+  &-content {
+    @include textStyles();
+    @include headingStyles();
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    color: color(whiteColor);
+
+    @include response(lg) {
+      top: 10%;
+      left: 40%;
+    }
+
+    @include response(md) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+
+    h2 {
+      font-size: size(xl);
+    }
+
+    p {
+      font-size: size(xs);
+      width: 70%;
+
+      @include response(xs) {
+        width: 100%;
+      }
+    }
+  }
+}

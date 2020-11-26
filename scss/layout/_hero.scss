@@ -1,0 +1,40 @@
+.hero {
+  height: 93vh;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(/images/space1.jpg) center center/cover no-repeat;
+
+  &-content {
+    @include textStyles();
+    @include headingStyles();
+    position: absolute;
+    top: 50%;
+    color: color(whiteColor);
+
+    @include response(md) {
+      top: 30%;
+    }
+
+    @include response(xs) {
+      top: 10%;
+    }
+
+    h1 {
+      font-size: size(xl);
+      width: 50%;
+
+      @include response(xs) {
+        width: 100%;
+      }
+    }
+
+    p {
+      width: 50%;
+      font-size: size(xs);
+
+      @include response(xs) {
+        width: 100%;
+      }
+    }
+  }
+}

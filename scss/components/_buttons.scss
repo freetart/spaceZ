@@ -1,0 +1,19 @@
+.btn {
+  @include headingStyles();
+  cursor: pointer;
+  font-size: size(sm);
+  font-family: "Nunito", sans-serif;
+  padding: 1rem;
+  background-color: transparent;
+  color: color(whiteColor);
+  outline: none;
+  border: 0.1rem solid color(whiteColor);
+  width: 20rem;
+  box-shadow: 0.1rem 0.1rem 0.4rem color(whiteColor);
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: color(whiteColor);
+    color: color(blackColor);
+  }
+}

@@ -1,0 +1,25 @@
+.section-1 {
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(/images/space4.jpg) center center/cover no-repeat;
+
+  &-content {
+    @include textStyles();
+    @include headingStyles();
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: color(whiteColor);
+    text-align: center;
+
+    h2 {
+      font-size: size(xl);
+    }
+
+    p {
+      font-size: size(xs);
+    }
+  }
+}
